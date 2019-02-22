@@ -5,11 +5,12 @@
 ?>
 
     <?php
-        $nome = $_GET["nome"];
-        $preco = $_GET["preco"];
-        $descricao = $_GET["descricao"];
+        $nome = $_POST["nome"];
+        $preco = $_POST["preco"];
+        $descricao = $_POST["descricao"];
+        $categoria_id = $_POST["categoria_id"];
 
-        if(insereProduto($conexao, $nome, $preco, $descricao)) {
+        if(insereProduto($conexao, $nome, $preco, $descricao, $categoria_id)) {
     ?>
 
     <p class="text-success">Produto <?=$nome;?> com o preço <?=$preco;?> adicionado com sucesso!</p>

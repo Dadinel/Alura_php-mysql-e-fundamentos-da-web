@@ -5,7 +5,7 @@
 ?>
 
     <?php 
-        $id = $_GET["id"];
+        $id = $_POST["id"];
 
         if(removeProduto($conexao, $id)) { ?>
             <p class="text-success">Produto <?=$id;?> removido!</p>
