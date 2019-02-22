@@ -20,6 +20,7 @@
             <td><?=$produto['nome'];?></td>
             <td><?=$produto['preco'];?></td>
             <td><?=substr($produto['descricao'], 0, 40);?></td>
+            <td><?=$produto['usado'] ? "Sim" : "Não";?></td>
             <td><?=$produto['categoria_nome'];?></td>
             <td>
                 <form action="remove-produto.php" method="post">

@@ -20,15 +20,22 @@
                 <td><textarea class="form-control" name="descricao"></textarea></td>
             </tr>
             <tr>
+                <td></td>
+                <td><input type="checkbox" name="usado" value="false"> Usado</td>
+            </tr>
+            <tr>
                 <td>Categoria</td>
                 <td>
-                    <?php 
-                        $categorias = listaCategorias($conexao);
+                    <select class="form-control" name="categoria_id">
+                        <?php 
+                            $categorias = listaCategorias($conexao);
 
-                        foreach($categorias as $categoria): ?>
-                            <input type="radio" name="categoria_id" value="<?=$categoria['id'];?>"><?=$categoria['nome'];?></br>
+                            foreach($categorias as $categoria): ?>
+                                <option value="<?=$categoria['id'];?>"><?=$categoria['nome'];?>
+                                </option>
 
-                    <?php endforeach ?>
+                        <?php endforeach ?>
+                    </select>
                 </td>
             </tr>
             <tr>
