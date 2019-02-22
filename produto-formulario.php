@@ -1,4 +1,5 @@
 <?php include("cabecalho.php"); ?>
+
 <h1>Formulário de produto</h1>
     <form action="adiciona-produto.php">
         <table class="table">
@@ -17,4 +18,5 @@
             </tr>
         </table>
     </form>
+
 <?php include("rodape.php"); ?>
